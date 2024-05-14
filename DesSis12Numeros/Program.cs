@@ -10,23 +10,30 @@ namespace DesSis12Numeros
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Informe a quantidade de números");
+            int range = int.Parse(Console.ReadLine());
 
-
-            Console.WriteLine("Digite a quantidade de numeros que deseja digitar: ");
-            int x = int.Parse(Console.ReadLine());
-            int[] xis = new int[x];
-            for (int i <= x) ;
+            int[] nm = new int[range];
+            int menor = int.MaxValue;
+            int maior = int.MinValue;
+            for (int i = 0; i < range; i++)
             {
-                Console.WriteLine("Digite um numero: ");
-                double NumFor[] = new double[j];
-            }
-            
-            
-            
-            
-            
-            Console.ReadKey()
+                Console.WriteLine("Digite o Número " + (i + 1) + ": ");
+                nm[i] = int.Parse(Console.ReadLine());
 
+                if (nm[i] <= menor) { menor = nm[i]; }
+                if (nm[i] >= maior) { maior = nm[i]; }
+            }
+
+            Console.Write("Números:");
+            for (int i = 0; i < range; i++)
+            {
+                Console.Write(" " + nm[i] + " ");
+
+            }
+            Console.WriteLine("\nMaior:" + maior);
+            Console.WriteLine("Menor:" + menor);
+            Console.ReadKey();
         }
     }
 }
